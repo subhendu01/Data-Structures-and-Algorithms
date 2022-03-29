@@ -1,3 +1,4 @@
+# complexity -->> O(n)
 def find_transaction(trans, search):
     for idx, value in enumerate(trans):
         if value['id'] == search:
