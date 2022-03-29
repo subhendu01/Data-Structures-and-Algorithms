@@ -104,6 +104,17 @@ class LinkedList:
                 break
             itr = itr.next
 
+    # reverse the linked list
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current is not None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev
+
     # utility function
     def print(self):
         if self.head is None:
@@ -112,23 +123,27 @@ class LinkedList:
         itr = self.head
         llstr = ''
         while itr:
-            llstr += str(itr.data) + '<->'
+            # llstr += str(itr.data) + '<->'
+            print(itr.data, end=' ')
             itr = itr.next
-        print(llstr)
+        # print(llstr)
 
 
 if __name__ == "__main__":
     ll = LinkedList()
-    ll.insert_values(["banana", "mango", "grapes", "orange"])
-    ll.print()
-    ll.insert_after_value("mango", "apple")
-    ll.print()
-    ll.remove_by_value("orange")
-    ll.print()
-    ll.remove_by_value("figs")
-    ll.print()
-    ll.remove_by_value("banana")
-    ll.remove_by_value("mango")
-    ll.remove_by_value("apple")
-    ll.remove_by_value("grapes")
+    ll.insert_at_beginning(10)
+    ll.insert_at_beginning(20)
+    # ll.insert_values(["banana", "mango", "grapes", "orange"])
+    # ll.print()
+    # ll.insert_after_value("mango", "apple")
+    # ll.print()
+    # ll.remove_by_value("orange")
+    # ll.print()
+    # ll.remove_by_value("figs")
+    # ll.print()
+    # ll.remove_by_value("banana")
+    # ll.remove_by_value("mango")
+    # ll.remove_by_value("apple")
+    # ll.remove_by_value("grapes")
+    # ll.reverse()
     ll.print()
