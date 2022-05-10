@@ -4,9 +4,10 @@ def reverse_iterative(lst):
         # Swap each number with the number in
         # the mirror position for example first
         # and last
-        n = lst[i]
-        lst[i] = lst[l-i-1]
-        lst[l-i-1] = n
+        lst[i], lst[l-i-1] = lst[l-i-1], lst[i]
+        # n = lst[i]
+        # lst[i] = lst[l-i-1]
+        # lst[l-i-1] = n
     return lst
 
 #using recursive method
@@ -30,5 +31,5 @@ def reverse_1(lst):
 
 if __name__ == "__main__":
     lst = [10, 19, 1, 27, 9]
-    print(reverse_recursive_sol(lst))
+    print(reverse_iterative(lst))
 

@@ -4,9 +4,11 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def __init__(self):
         self.head = None
+
     def addTwoNumbers(self, l1, l2, carry=0):
         if not l1 and not l2 and not carry: return None
         csum = carry
@@ -34,8 +36,8 @@ class Solution:
         self.head = None
         for data in data_list:
             self.insert_at_end(data)
-l1 = [2,4,3]
-l2 = [5,6,4]
+l1 = [2, 4, 3]
+l2 = [5, 6, 4]
 obj = Solution()
 
 print(obj.addTwoNumbers(obj.insert_values(l1), obj.insert_values(l2)))
