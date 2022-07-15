@@ -48,6 +48,6 @@ def find_occurance(lst, num):
 
 if __name__ == "__main__":
     lst = [12, 15, 18, 29, 45, 45, 79]
-    # print(binary_search(lst, 0))
+    print(binary_search(lst, 15))
     # print(binary_search_recursion(lst, 29, 0, len(lst)))
-    print(find_occurance(lst, 79))
+    # print(find_occurance(lst, 79))
